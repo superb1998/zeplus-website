@@ -6,6 +6,7 @@
     "no-inline-styles": "off",
     "axe/aria": "off",
     "axe/forms": "off",
-    "typescript-config/consistent-casing": "off"
+    "typescript-config/consistent-casing": "off",
+    "typescript-config/is-valid": "off"
   }
 }

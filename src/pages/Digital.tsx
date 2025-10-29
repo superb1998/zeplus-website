@@ -12,6 +12,7 @@ import instructor from '../assets/courses/instructor.png'
 import  { useState, useRef } from 'react'
 
 const Digital = () => {
+    const [interest, setInterest] = useState("");
     const [openIndex, setOpenIndex] = useState<number | null>(0)
     const formRef = useRef<HTMLElement | null>(null)
 
@@ -97,22 +98,28 @@ const Digital = () => {
                                   <p className='font-[500]'>Turn clicks into customers.</p>
                                   <p className='font-[500]'>Build brands that matter</p>
                                   <p className='font-[500]'>Lead Africa’s digital future.</p>
-                                   <div className='flex flex-row gap-3 mt-2'>
-                                    <a
-        href="https://wa.me/2348169669110?text=Hello%2C%20I%20would%20like%20to%20learn%20more%20about%20the%20Digital%20Marketing%20course%20at%20Zeplus%20Academy."
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-    <div className='flex flex-row gap-2.5 items-center justify-center cursor-pointer bg-[#27D366] md:px-15 px-10 py-2.5 rounded'>
-    <p className='font-[500] '>Let's Talk</p>
-    <span>
-      <img src={whatsapp} alt='icon' className='w-4 h-4 ' />
-    </span>
-  </div>
+                                  <div className="flex flex-row sm:flex-row gap-3 sm:gap-5 w-full sm:w-auto justify-start items-center">
+            {/* LET'S TALK BUTTON */}
+            <a
+              href="https://wa.me/2348169669110?text=Hello%2C%20I%20would%20like%20to%20learn%20more%20about%20the%20Digital%20Marketing%20course%20at%20Zeplus%20Academy."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-[220px] h-[45px] flex flex-row items-center justify-center gap-2.5 cursor-pointer bg-[#27D366] rounded font-medium text-[15px]"
+            >
+              <p className="whitespace-nowrap text-center">Let's Talk</p>
+              <img src={whatsapp} alt="icon" className="w-4 h-4" />
+            </a>
+
+            {/* DOWNLOAD BROCHURE BUTTON */}
+            <a
+  href="#apply-form"
+  onClick={() => setInterest("Brochure Download")}
+  className="w-full sm:w-[220px] h-[45px] flex items-center justify-center border-2 border-[#6C27FF] bg-white text-[#6C27FF] rounded font-medium text-[15px] hover:bg-[#6C27FF] hover:text-white transition-all duration-200 whitespace-nowrap"
+>
+  Download Brochure
 </a>
-                                    <p onClick={scrollToForm} role="button" tabIndex={0} className='cursor-pointer text-black border border-[#5E0BD1] md:px-10 md:py-3 py-2.5 px-5
-                                     font-[500] rounded'>Download Brochure</p>
-                                  </div>
+
+          </div>
         
                                      {/* Duration */}
                                   <div className='md:max-w-[650px] mt-4'>
@@ -619,7 +626,7 @@ const Digital = () => {
         <div className='md:max-w-7xl mx-auto pt-30 '>
             <div className='flex flex-col gap-3 items-center justify-center'>
                 <div>
-                    <h2 className='md:text-[35px] text-[25px] font-[550]'>Your Journey at Zeplus Academy</h2>
+                    <h2 className='md:text-[35px] text-[25px] font-[550] text-center'>Your Journey at Zeplus Academy</h2>
                 </div>
                 {/* steps */}
                 <div className='flex flex-col gap-3 md:mt-10 mt-6 md:max-w-4xl mx-auto md:px-0 px-8'>
@@ -773,6 +780,8 @@ const Digital = () => {
                                    <option>Online</option>                                 
                               </select>
                          </div>
+                         <input type="hidden" name="interest" value={interest} />
+
                          <button className='bg-[#5E0BD1] text-white py-2.5  font-[380] rounded-md mb-20'>Submit</button>
                      </form>
              </section>

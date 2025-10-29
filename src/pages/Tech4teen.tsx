@@ -366,193 +366,124 @@ const Tech4teen = () => {
 
     {/* Hero 8 */}
     {/* Testimonials */}
-  <section id='testimonials' className='w-full bg-white'>
-  <div className='bg-[#5E0BD1] w-40 rounded flex items-center justify-center mx-auto mb-5 mt-10'>
-    <h2 className='py-2 px-4 text-white text-center'>TESTIMONIALS</h2>
-  </div>
-
-  <div className='mx-auto px-6 sm:px-10 md:px-20 pt-10 pb-10 bg-[#F7E1E1F2]'>
+<section id='testimonials' className='w-full bg-white pb-10'>
+  <div className='md:max-w-7xl mx-auto md:px-0 px-5 pt-10 pb-10'>
     <div className='text-center items-center justify-center mx-auto'>
-      <p className='font-Sora text-2xl sm:text-3xl md:text-[40px] mb-4 px-2'>
-        Hear what they say about us.
-      </p>
+      <div className='bg-[#5E0BD1] w-40 rounded items-center justify-center mx-auto mb-3'>
+        <h2 className='py-2 px-4 text-white'>TESTIMONIALS</h2>
+      </div>
+      <p className='font-Sora text-3xl md:text-[50px] mb-4'>Hear what they say about us.</p>
     </div>
 
-    {/* gradient taller than image */}
+    {/* main gradient testimonial */}
     <div className='relative rounded-lg overflow-hidden py-3'>
-      <img
-        src={testImage}
-        alt='image'
-        className='w-full h-auto md:rounded-xl block'
-      />
+      <img src={testImage} alt='image' className='w-full h-[300px] md:h-[420px] object-cover md:rounded-xl block' />
 
       {/* gradient overlay */}
       <div
         className='absolute inset-0'
         style={{
-          background:
-            'linear-gradient(180deg, #3B1B6C80 0%, #00000066 50%, #3B1B6C80 100%)',
+          background: 'linear-gradient(180deg, #3B1B6C80 0%, #00000066 50%, #3B1B6C80 100%)',
           zIndex: 10
         }}
       />
 
-      {/* centered text overlay */}
+      {/* text */}
       <div
-        className='absolute inset-0 flex flex-col items-center justify-center pointer-events-none md:mt-20 mt-10 px-4'
+        className='absolute inset-0 flex flex-col items-center justify-center pointer-events-none md:mt-25 mt-10'
         style={{ zIndex: 20 }}
       >
-        <p className='text-white text-center text-[14px] sm:text-[16px] md:text-2xl font-light font-Sora md:mb-3'>
+        <p className='text-white text-center px-4 md:px-8 text-sm md:text-2xl font-light font-Sora md:mb-3'>
           “I had an amazing experience at Zeplus Academy.”
         </p>
-        <h2 className='text-white md:text-[22px] text-sm font-light font-sora md:mb-3'>
-          -
-        </h2>
-        <h2 className='text-white md:text-[22px] text-sm font-light font-sora'>
-          UIUX Designer, Nigeria
-        </h2>
+        <h2 className='text-white md:text-[22px] text-sm font-light font-sora md:mb-3'>-</h2>
+        <h2 className='text-white md:text-[22px] text-sm font-light font-sora'>UIUX Designer, Nigeria</h2>
       </div>
     </div>
 
-    {/* 3 smaller testimonials */}
+    {/* 3 testimonial boxes */}
     <div className='flex flex-col md:flex-row gap-6 mt-10'>
-      {/* Testimonial 1 */}
-      <div className='relative w-full max-w-xs mx-auto rounded-lg overflow-hidden md:mt-5'>
-        <img
-          src={test1}
-          alt='testimonial1'
-          className='w-full h-56 object-cover block'
-        />
-        <div
-          className='absolute inset-0'
-          style={{
-            background:
-              'linear-gradient(180deg, rgba(34, 31, 33, 0.6) 0%, rgba(0,0,0,0.45) 50%, rgba(34, 33, 37, 0.6) 100%)',
-            zIndex: 10
-          }}
-        />
-        <div
-          className='absolute inset-0 flex flex-col items-baseline justify-end px-4 pb-5'
-          style={{ zIndex: 20 }}
-        >
-          <p className='text-white text-[14px] md:text-[19px] font-light font-Sora'>
-            Joe
-          </p>
-          <h2 className='text-white text-ssm font-sora font-light'>
-            Product Designer, USA
-          </h2>
+      {/* 1 */}
+      <div className='relative w-full md:w-1/3 h-[260px] mx-auto rounded-lg overflow-hidden'>
+        <img src={test1} alt='testimonial1' className='w-full h-full object-cover' />
+        <div className='absolute inset-0' style={{ background: 'linear-gradient(180deg, rgba(34, 31, 33, 0.6) 0%, rgba(0,0,0,0.45) 50%, rgba(34, 33, 37, 0.6) 100%)', zIndex: 10 }} />
+        <div className='absolute inset-0 flex flex-col justify-end p-4' style={{ zIndex: 20 }}>
+          <p className='text-white text-[14px] md:text-[18px] font-light font-Sora'>Joe</p>
+          <h2 className='text-white text-xs md:text-sm font-sora font-light'>Product Designer, USA</h2>
         </div>
       </div>
 
-      {/* Testimonial 2 */}
-      <div className='relative w-full max-w-[400px] mx-auto rounded-lg overflow-hidden'>
-        <img src={test2} alt='testimonial2' className='w-full h-56 object-cover block' />
-        <div
-          className='absolute inset-0'
-          style={{
-            background:
-              'linear-gradient(180deg, rgba(34, 31, 33, 0.6) 0%, rgba(0,0,0,0.45) 50%, rgba(34, 33, 37, 0.6) 100%)',
-            zIndex: 10
-          }}
-        />
-        <div
-          className='absolute inset-0 flex flex-col items-baseline justify-end px-4 pb-5'
-          style={{ zIndex: 20 }}
-        >
-          <p className='text-white text-[14px] md:text-[18px] font-light font-Sora'>
-            Mosope
-          </p>
-          <h2 className='text-white text-ssm font-sora font-light'>
-            Product Designer, United Kingdom
-          </h2>
+      {/* 2 */}
+      <div className='relative w-full md:w-1/3 h-[260px] mx-auto rounded-lg overflow-hidden'>
+        <img src={test2} alt='testimonial2' className='w-full h-full object-cover' />
+        <div className='absolute inset-0' style={{ background: 'linear-gradient(180deg, rgba(34, 31, 33, 0.6) 0%, rgba(0,0,0,0.45) 50%, rgba(34, 33, 37, 0.6) 100%)', zIndex: 10 }} />
+        <div className='absolute inset-0 flex flex-col justify-end p-4' style={{ zIndex: 20 }}>
+          <p className='text-white text-[14px] md:text-[18px] font-light font-Sora'>Mosope</p>
+          <h2 className='text-white text-xs md:text-sm font-sora font-light'>Product Designer, United Kingdom</h2>
         </div>
       </div>
 
-      {/* Testimonial 3 */}
-      <div className='relative w-full max-w-xs mx-auto rounded-lg overflow-hidden md:mt-5'>
-        <img
-          src={test3}
-          alt='testimonial3'
-          className='w-full h-56 object-cover block'
-        />
-        <div
-          className='absolute inset-0'
-          style={{
-            background:
-              'linear-gradient(180deg, rgba(59,27,108,0.6) 0%, rgba(0,0,0,0.45) 50%, rgba(59,27,108,0.6) 100%)',
-            zIndex: 10
-          }}
-        />
-        <div
-          className='absolute inset-0 flex flex-col items-baseline justify-end px-4 pb-5'
-          style={{ zIndex: 20 }}
-        >
-          <p className='text-white text-[14px] md:text-[18px] font-light font-Sora'>
-            Rebecca
-          </p>
-          <h2 className='text-white text-ssm font-sora font-light'>
-            Product Designer, Nigeria
-          </h2>
+      {/* 3 */}
+      <div className='relative w-full md:w-1/3 h-[260px] mx-auto rounded-lg overflow-hidden'>
+        <img src={test3} alt='testimonial3' className='w-full h-full object-cover' />
+        <div className='absolute inset-0' style={{ background: 'linear-gradient(180deg, rgba(59,27,108,0.6) 0%, rgba(0,0,0,0.45) 50%, rgba(59,27,108,0.6) 100%)', zIndex: 10 }} />
+        <div className='absolute inset-0 flex flex-col justify-end p-4' style={{ zIndex: 20 }}>
+          <p className='text-white text-[14px] md:text-[18px] font-light font-Sora'>Rebecca</p>
+          <h2 className='text-white text-xs md:text-sm font-sora font-light'>Product Designer, Nigeria</h2>
         </div>
       </div>
     </div>
   </div>
 
   {/* Alumni Section */}
-  <div className='md:px-30 px-6 bg-[#F7E1E1F2] pb-10'>
-    <div className='grid md:grid-cols-3 grid-cols-1 gap-6 md:gap-5 items-center justify-center '>
+  <div className='md:px-30 px-6 mt-10'>
+    <div className='grid md:grid-cols-3 grid-cols-1 gap-6 md:gap-5 items-stretch justify-center'>
       {/* Alumni 1 */}
-      <div className='bg-[#F6F7FD] rounded-lg px-6 pt-10 pb-10 flex flex-col'>
+      <div className='bg-[#F6F7FD] rounded-lg px-6 pt-10 pb-10 flex flex-col min-h-[260px]'>
         <div className='flex flex-row gap-3 mb-5'>
           <img src={alumni1} alt='alumni1' className='w-12 h-12 object-cover rounded-full' />
           <div className='flex flex-col'>
-            <h2>Tunde</h2>
-            <p>UI/UX Designer</p>
+            <h2 className='font-semibold text-sm md:text-base'>Tunde</h2>
+            <p className='text-xs md:text-sm'>UI/UX Designer</p>
           </div>
         </div>
-        <div className='md:max-w-[350px]'>
-          <p>
-            “Learning design at Zeplus transformed my career — I went from beginner
-            to job-ready in just four months.”
-          </p>
-        </div>
+        <p className='text-sm md:text-base leading-relaxed'>
+          “Learning design at Zeplus transformed my career — I went from beginner to job-ready in just four months.”
+        </p>
       </div>
 
       {/* Alumni 2 */}
-      <div className='bg-[#F6F7FD] rounded-lg px-6 pt-10 pb-10 flex flex-col'>
+      <div className='bg-[#F6F7FD] rounded-lg px-6 pt-10 pb-10 flex flex-col min-h-[260px]'>
         <div className='flex flex-row gap-3 mb-5'>
           <img src={alumni2} alt='alumni2' className='w-12 h-12 object-cover rounded-full' />
           <div className='flex flex-col'>
-            <h2>Adaeze</h2>
-            <p>Product Designer @ Fintech Startup</p>
+            <h2 className='font-semibold text-sm md:text-base'>Adaeze</h2>
+            <p className='text-xs md:text-sm'>Product Designer @ Fintech Startup</p>
           </div>
         </div>
-        <div className='md:max-w-[350px]'>
-          <p>
-            “Zeplus gave me the confidence to create designs that solve real
-            problems. The mentorship and AI modules were game-changers.”
-          </p>
-        </div>
+        <p className='text-sm md:text-base leading-relaxed'>
+          “Zeplus gave me the confidence to create designs that solve real problems. The mentorship and AI modules were game-changers.”
+        </p>
       </div>
 
       {/* Alumni 3 */}
-      <div className='bg-[#F6F7FD] rounded-lg px-6 pt-10 pb-10 flex flex-col'>
+      <div className='bg-[#F6F7FD] rounded-lg px-6 pt-10 pb-10 flex flex-col min-h-[260px]'>
         <div className='flex flex-row gap-3 mb-5'>
           <img src={alumni3} alt='alumni3' className='w-12 h-12 object-cover rounded-full' />
           <div className='flex flex-col'>
-            <h2>Amarachi</h2>
-            <p>Freelancer, Alumni</p>
+            <h2 className='font-semibold text-sm md:text-base'>Amarachi</h2>
+            <p className='text-xs md:text-sm'>Freelancer, Alumni</p>
           </div>
         </div>
-        <div className='md:max-w-[350px]'>
-          <p>
-            “Zeplus gave me the confidence to pursue design as a real career path.
-            The mentorship and projects changed everything.”
-          </p>
-        </div>
+        <p className='text-sm md:text-base leading-relaxed'>
+          “Zeplus gave me the confidence to pursue design as a real career path. The mentorship and projects changed everything.”
+        </p>
       </div>
     </div>
   </div>
 </section>
+
+
 
 {/* Hero 9 */}
 {/* Apply Now Section */}
@@ -686,30 +617,36 @@ const Tech4teen = () => {
 
   {/* Contact Section */}
   <div className="bg-gradient-to-r from-[#60070B] to-[#9C0E76] flex flex-col md:flex-row items-center justify-center md:justify-between gap-6 md:gap-10 px-6 md:px-20 py-10 text-white">
-    <p className="text-center md:text-left text-[14px] sm:text-[15px] md:text-[16px] max-w-lg">
-      Send us a message at info@zeplusacademy.com or chat with a Zeplus Advisor for instant guidance.
-    </p>
-    
-    <img src={StraightLine} alt="line" className="hidden md:block" />
+  <p className="text-center md:text-left text-[14px] sm:text-[15px] md:text-[16px] max-w-lg">
+    Send us a message at info@zeplusacademy.com or chat with a Zeplus Advisor for instant guidance.
+  </p>
 
-    <div className="flex flex-col sm:flex-row gap-3 sm:gap-5 w-full sm:w-auto justify-center items-center">
-      <a
-        href="https://wa.me/2348169669110?text=Hello%2C%20I%20would%20like%20to%20learn%20more%20about%20the%20Teen%20Program%20at%20Zeplus%20Academy."
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-    <div className='flex flex-row gap-2.5 items-center justify-center cursor-pointer bg-[#27D366] md:px-15 px-10 py-2.5 rounded'>
-    <p className='font-[500] '>Let's Talk</p>
-    <span>
-      <img src={whatsapp} alt='icon' className='w-4 h-4 ' />
-    </span>
+  <img src={StraightLine} alt="line" className="hidden md:block" />
+
+  <div className="flex flex-row gap-3 sm:gap-5 w-full sm:w-auto justify-center items-center">
+    <a
+      href="https://wa.me/2348169669110?text=Hello%2C%20I%20would%20like%20to%20learn%20more%20about%20the%20Tech4Teen%20Program%20at%20Zeplus%20Academy."
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-full sm:w-[200px]"
+    >
+      <div className="flex flex-row gap-2.5 items-center justify-center cursor-pointer bg-[#27D366] w-full sm:w-[200px] px-6 py-2.5 rounded">
+        <p className="font-[500]">Let's Talk</p>
+        <span>
+          <img src={whatsapp} alt="icon" className="w-4 h-4" />
+        </span>
+      </div>
+    </a>
+
+    <a
+      href="#programs"
+      className="flex items-center justify-center w-full sm:w-[200px] h-[40px] border-2 border-[#6C27FF] bg-white text-[#6C27FF] font-semibold font-inter text-[14px] sm:text-[16px] md:text-[18px] hover:bg-[#6C27FF] hover:text-white transition-all duration-200 whitespace-nowrap px-6"
+    >
+      Explore Courses
+    </a>
   </div>
-</a>
-      <a href='#programs' className="flex items-center justify-center w-full sm:w-[200px] h-[40px] border-2 border-[#6C27FF] bg-white text-[#6C27FF] font-semibold font-inter text-[14px] sm:text-[16px] md:text-[18px] hover:bg-[#6C27FF] hover:text-white transition-all duration-200 whitespace-nowrap">
-        Explore Courses
-      </a>
-    </div>
-  </div>
+</div>
+
 
 
     

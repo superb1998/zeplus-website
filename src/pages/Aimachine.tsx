@@ -10,11 +10,16 @@ import alumni3 from '../assets/courses/alumni3.png'
 import whatsapp from '../assets/courses/whatsapp.png'
 import instructor from '../assets/courses/instructor.png'
 import calendar from '../assets/courses/date.svg'
-import location from '../assets/courses/loc.svg'
+import Tick from '../assets/img/tick.png'
 import Whatsapp from '../assets/courses/whatsapp.png'
 import  { useState, useRef } from 'react'
 
 const Aimachine = () => {
+    const [interest, setInterest] = useState("");
+
+
+
+
     const [openIndex, setOpenIndex] = useState<number | null>(0)
     const formRef = useRef<HTMLElement | null>(null)
 
@@ -78,93 +83,94 @@ const Aimachine = () => {
   ]
 
   return (
-    <section className='w-full bg-white'>
-      <section
-        className='w-full font-poppins'
-        style={{
-          backgroundImage: `url(${hero1bg})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
-        <div className='py-10 md:max-w-7xl mx-auto'>
-              <div className='flex flex-col md:flex-row gap-10 items-center justify-between md:px-0 px-6 my-'>
-                    {/* Left side */}
-                    <div className='flex flex-col md:max-w-[800px]'>
-                        <div className='md:max-w-[550px] mb-5'>
-                            <h1 className='md:text-[50px] text-4xl font-[600]'>AI & Machine Learning Mastery Program</h1>
-                        </div>
-                        <div className='md:max-w-[700px] flex flex-col gap-3 mt-3'>
-                                 <h2 className='md:text-[40px] text-3xl font-[650] text-[#6c0c11]'>279,000 NGN </h2>
-                                  <p className='font-[500]'>Transform data into innovation.</p>
-                                  <div className='md:max-w-[600px] '>
-                                    <p className='font-[390]'>Master the intelligence that powers the world’s smartest
-                                     systems — and become part of Africa’s next generation of AI innovators.</p>
-                                  </div>
-                                   <div className='flex flex-row gap-3 mt-2'>
-                                    <a
-        href="https://wa.me/2348169669110?text=Hello%2C%20I%20would%20like%20to%20learn%20more%20about%20the%20AI%20&%20Machine%20Learning%20course%20at%20Zeplus%20Academy."
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-    <div className='flex flex-row gap-2.5 items-center justify-center cursor-pointer bg-[#27D366] md:px-15 px-10 py-2.5 rounded'>
-    <p className='font-[500] '>Let's Talk</p>
-    <span>
-      <img src={Whatsapp} alt='icon' className='w-4 h-4 ' />
-    </span>
-  </div>
-</a>
-                                    <p onClick={scrollToForm} role="button" tabIndex={0} className='cursor-pointer text-black border border-[#5E0BD1] md:px-10 md:py-3 py-2.5 px-5
-                                     font-[500] rounded'>Download Brochure</p>
-                                  </div>
-        
-                                     {/* Duration */}
-                                  <div className='md:max-w-[650px] mt-4'>
-                                    <div className='flex md:flex-row flex-col md:gap-10 gap-2'>
-                                    {/* 1st */}
-                                    <div className='flex flex-row gap-2'>
-                                        <span>
-                                            <img src={mark} alt='icon' className='w-4 h-4 mt-1' />
-                                        </span>
-                                        <p className='font-[390]'><span className='font-[600]'>Duration:</span> 16 weeks</p>
-                                    </div>
-                                    {/* 2nd */}
-                                    <div className='flex flex-row gap-2'>
-                                        <span>
-                                            <img src={mark} alt='icon' className='w-4 h-4 mt-1' />
-                                        </span>
-                                        <p className='font-[390]'><span className='font-[600]'>Hybrid Learning:</span> Online or in-Person</p>
-                                    </div>
-                                   
-                                  </div>
-                                  <div className='flex md:flex-row flex-col md:gap-18 gap-2 md:mt-3 mt-2'>
-                                     {/* 3rd */}
-                                    <div className='flex flex-row gap-3'>
-                                        <span>
-                                            <img src={mark} alt='icon' className='w-4 h-4 mt-1' />
-                                        </span>
-                                        <p className='font-[600]'>4 hours/week</p>
-                                    </div>
-                                    {/* 4th */}
-                                    <div className='flex flex-row gap-3'>
-                                        <span>
-                                            <img src={mark} alt='icon' className='w-4 h-4 mt-1' />
-                                        </span>
-                                        <p className='font-[390]'><span className='font-[600]'>Flexible Schedules:</span> Day or Evening Classes</p>
-                                    </div>
-                                  </div>
-
-                                  </div>
-                        </div>
-                    </div>
-                    {/* Right side */}
-                    <div className='md:max-w-[600px] '>
-                        <img src={aiheropic} alt="Digital Growth" className='w-full md:h-115 h-80 object-cover rounded' />
-                    </div>
-              </div>
+    <section className='w-full bg-white overflow-x-hidden'>
+   <section
+  className='w-full font-poppins'
+  style={{
+    backgroundImage: `url(${hero1bg})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat'
+  }}
+>
+  <div className='py-10 px-6 md:px-0 md:max-w-7xl mx-auto'>
+    <div className='flex flex-col md:flex-row gap-10 items-center justify-between'>
+      
+      {/* Left side */}
+      <div className='flex flex-col md:max-w-[800px]'>
+        <div className='md:max-w-[550px] mb-5'>
+          <h1 className='md:text-[50px] text-4xl font-[600]'>AI & Machine Learning Mastery Program</h1>
         </div>
-      </section>
+
+        <div className='md:max-w-[700px] flex flex-col gap-3 mt-3'>
+          <h2 className='md:text-[40px] text-3xl font-[650] text-[#6c0c11]'>279,000 NGN </h2>
+          <p className='font-[500]'>Transform data into innovation.</p>
+          <div className='md:max-w-[600px]'>
+            <p className='font-[390]'>Master the intelligence that powers the world’s smartest
+              systems — and become part of Africa’s next generation of AI innovators.</p>
+          </div>
+
+          <div className="flex flex-row sm:flex-row gap-3 sm:gap-5 w-full sm:w-auto justify-start items-center">
+            {/* LET'S TALK BUTTON */}
+            <a
+              href="https://wa.me/2348169669110?text=Hello%2C%20I%20would%20like%20to%20learn%20more%20about%20the%20AI%20&Machine%20Learning%20course%20at%20Zeplus%20Academy."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-[220px] h-[45px] flex flex-row items-center justify-center gap-2.5 cursor-pointer bg-[#27D366] rounded font-medium text-[15px]"
+            >
+              <p className="whitespace-nowrap text-center">Let's Talk</p>
+              <img src={Whatsapp} alt="icon" className="w-4 h-4" />
+            </a>
+
+            {/* DOWNLOAD BROCHURE BUTTON */}
+            <a
+  href="#apply-form"
+  onClick={() => setInterest("Brochure Download")}
+  className="w-full sm:w-[220px] h-[45px] flex items-center justify-center border-2 border-[#6C27FF] bg-white text-[#6C27FF] rounded font-medium text-[15px] hover:bg-[#6C27FF] hover:text-white transition-all duration-200 whitespace-nowrap"
+>
+  Download Brochure
+</a>
+
+          </div>
+
+          {/* Duration Section */}
+          <div className='md:max-w-[650px] mt-4'>
+            <div className='flex md:flex-row flex-col md:gap-10 gap-2'>
+              <div className='flex flex-row gap-2'>
+                <img src={mark} alt='icon' className='w-4 h-4 mt-1' />
+                <p className='font-[390]'><span className='font-[600]'>Duration:</span> 16 weeks</p>
+              </div>
+              <div className='flex flex-row gap-2'>
+                <img src={mark} alt='icon' className='w-4 h-4 mt-1' />
+                <p className='font-[390]'><span className='font-[600]'>Hybrid Learning:</span> Online or in-Person</p>
+              </div>
+            </div>
+
+            <div className='flex md:flex-row flex-col md:gap-18 gap-2 md:mt-3 mt-2'>
+              <div className='flex flex-row gap-3'>
+                <img src={mark} alt='icon' className='w-4 h-4 mt-1' />
+                <p className='font-[600]'>4 hours/week</p>
+              </div>
+              <div className='flex flex-row gap-3'>
+                <img src={mark} alt='icon' className='w-4 h-4 mt-1' />
+                <p className='font-[390]'><span className='font-[600]'>Flexible Schedules:</span> Day or Evening Classes</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      {/* Right side */}
+      <div className='md:max-w-[600px]'>
+        <img src={aiheropic} alt="Digital Growth" className='w-full md:h-115 h-80 object-cover rounded' />
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
 
       {/* Course Overview */}
       <section className='bg-white w-full font-poppins'>
@@ -591,56 +597,25 @@ const Aimachine = () => {
      </section>
 
 
-      {/* Location Section */}
-       <section className='md:max-w-6xl mx-auto mt-10 font-poppins bg-gradient-to-br from-[#60070B] to-[#9C0E76] text-white md:rounded-lg'>
-        <div className='md:p-10 md:max-w-2xl max-w-[400px] mx-auto p-6'>
-            <div className='flex flex-col gap-1 items-center mb-4'>
-                  <h2 className='text-white font-[600] md:text-[45px] text-[30px]'>Learn Anywhere</h2>
-                  <p className='font-[380] md:text-[16px] text-[14px]'>Choose From</p>
-            </div>
-             <div className='flex md:flex-row flex-col gap-10 items-center'>
-                {/* left side */}
-                <div className='md:max-w-[650px] max-w-[400px] md:border-r border-white ssm:border-b md:pr-6 pb-6'>
-                   <div className='grid grid-cols-2 gap-10'>
-                    {/* 1st */}
-                     <div className='flex flex-row gap-4 items-center'>
-                        <span>
-                            <img src={location} alt='icon' className='w-5 h-5 ' />
-                        </span>
-                        <p className='font-[550] md:text-[24px] text-[16px]'>Magodo</p>
-                     </div>
-                        {/* 2nd */}
-                         <div className='flex flex-row gap-4 items-center'>
-                        <span>
-                            <img src={location} alt='icon' className='w-5 h-5 ' />
-                        </span>
-                        <p className='font-[550] md:text-[24px] text-[16px]'>Yaba</p>
-                     </div>
-                     {/* 3rd */}
-                      <div className='flex flex-row gap-4 items-center'>
-                        <span>
-                            <img src={location} alt='icon' className='w-5 h-5 ' />
-                        </span>
-                        <p className='font-[550] md:text-[24px] text-[16px]'>Festac</p>
-                     </div>
-                        {/* 4th */}
-                         <div className='flex flex-row gap-4 items-center'>
-                        <span>
-                            <img src={location} alt='icon' className='w-5 h-5 ' />
-                        </span>
-                        <p className='font-[550] md:text-[24px] text-[16px]'>Ikeja</p>
-                     </div>
-                   </div>
-                </div>
-                {/* right side */}
-                <div className='md:max-w-[400px] flex items-center'>
-                    <div className=''>
-                        <h2 className='font-[380]'>Online learning hub</h2>
-                    </div>
-                </div>
-             </div>
-        </div>
-       </section>
+      {/* Learn Anywhere */}
+ <div className='bg-gradient-to-r from-[#60070B] to-[#9C0E76] py-8 md:py-12 px-4 md:px-12 lg:px-20 w-full  mt-8'>
+  <h1 className='font-poppins text-[20px] sm:text-[24px] md:text-[35px] font-bold text-white text-center mb-4 md:mb-5 leading-tight'>
+    Learn Anywhere
+  </h1>
+  <p className='font-inter font-light text-[14px] sm:text-[16px] md:text-[18px] text-white mb-5 md:mb-6 text-center'>
+    Choose how you want to learn
+  </p>
+
+  <span className='text-white flex flex-col md:flex-row md:gap-4 gap-1 items-center justify-center mb-3 md:mb-4 font-inter font-light text-[14px] sm:text-[16px] md:text-[18px] text-center'>
+    <img src={Tick} alt="tick" className='w-[20px] sm:w-[23px] h-[16px] sm:h-[19px]'/>
+    <p><span className="font-semibold">In-Person:</span> Learn at any of our Lagos centers.</p>
+  </span>
+
+  <span className='text-white flex flex-col md:flex-row md:gap-4 gap-1 items-center justify-center font-inter font-light text-[14px] sm:text-[16px] md:text-[18px] text-center'>
+    <img src={Tick} alt="tick" className='w-[20px] sm:w-[23px] h-[16px] sm:h-[19px]'/>
+    <p><span className="font-semibold">Online:</span> Join live classes from anywhere.</p>
+  </span>
+</div>
 
 
        <section className='md:max-w-7xl mx-auto mt-10 font-poppins bg-[#F6F7FD] rounded-lg'>
@@ -720,6 +695,8 @@ const Aimachine = () => {
                                    <option>Online</option>                                 
                               </select>
                          </div>
+                         <input type="hidden" name="interest" value={interest} />
+
                          <button className='bg-black text-white py-2.5  font-[380] rounded-md mb-20 w-40'>Submit</button>
                      </form>
              </section>

@@ -60,7 +60,7 @@ const SchoolPartnership = () => {
       innovation skills that prepare them for the future.
     </p>
 
-    <div className="flex flex-col sm:flex-row gap-3 sm:justify-center md:justify-start mt-10">
+    <div className="flex flex-row sm:flex-row gap-3 sm:justify-center md:justify-start mt-10">
        <a href="#apply-form" className="bg-[#60070B] text-white w-full sm:w-[254px] h-[43px] rounded-sm flex justify-center items-center">
         Apply Now
       </a>

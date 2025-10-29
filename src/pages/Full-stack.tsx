@@ -15,6 +15,8 @@ import whatsapp from '../assets/courses/whatsapp.png'
 
 
 const Fullstack = () => {
+  const [interest, setInterest] = useState("");
+
       const formRef = useRef<HTMLElement | null>(null)
   
       const scrollToForm = () => {
@@ -52,10 +54,10 @@ const Fullstack = () => {
 <section className="bg-cover bg-center bg-no-repeat w-full flex flex-col md:flex-row md:justify-between md:items-center gap-8 md:gap-0 px-5 sm:px-10 md:px-20 py-6" style={{ backgroundImage: `url(${Hero1bg})` }}>
 
     {/* right column on mobile (image first) */}
-    <img src={Hero1} alt="hero img" className="w-full md:w-auto object-contain order-1 md:order-2"/>
+    <img src={Hero1} alt="hero img" className="w-full md:w-auto object-contain order-2 md:order-2"/>
 
     {/* left column */}
-    <div className="order-2 md:order-1 text-left md:text-left">
+    <div className="order-1 md:order-1 text-left md:text-left">
 
       <h1 className="font-poppins font-extrabold text-[26px] sm:text-[32px] md:text-[38px] leading-[38px] sm:leading-[45px] md:leading-[55px] mb-3">
         Full Stack Web Development with AI Integration
@@ -76,24 +78,30 @@ const Fullstack = () => {
         Become a professional web developer capable of building scalable, AI-powered web applications that solve real problems.
       </p>
 
-      <div className="flex flex-row sm:flex-row gap-3 sm:justify-center md:justify-start">
-        <a
-        href="https://wa.me/2348169669110?text=Hello%2C%20I%20would%20like%20to%20learn%20more%20about%20the%20Full%20Stack%20Web%20Development%20course%20at%20Zeplus%20Academy."
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-    <div className='flex flex-row gap-2.5 items-center justify-center cursor-pointer bg-[#27D366] md:px-15 px-10 py-2.5 rounded'>
-    <p className='font-[500] '>Let's Talk</p>
-    <span>
-      <img src={whatsapp} alt='icon' className='w-4 h-4 ' />
-    </span>
-  </div>
+      
+       <div className="flex flex-row sm:flex-row gap-3 sm:gap-5 w-full sm:w-auto justify-start items-center">
+            {/* LET'S TALK BUTTON */}
+            <a
+              href="https://wa.me/2348169669110?text=Hello%2C%20I%20would%20like%20to%20learn%20more%20about%20the%20Full%20Stack%20Web%20Development%20course%20at%20Zeplus%20Academy."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-[220px] h-[45px] flex flex-row items-center justify-center gap-2.5 cursor-pointer bg-[#27D366] rounded font-medium text-[15px]"
+            >
+              <p className="whitespace-nowrap text-center">Let's Talk</p>
+              <img src={whatsapp} alt="icon" className="w-4 h-4" />
+            </a>
+
+            {/* DOWNLOAD BROCHURE BUTTON */}
+            <a
+  href="#apply-form"
+  onClick={() => setInterest("Brochure Download")}
+  className="w-full sm:w-[220px] h-[45px] flex items-center justify-center border-2 border-[#6C27FF] bg-white text-[#6C27FF] rounded font-medium text-[15px] hover:bg-[#6C27FF] hover:text-white transition-all duration-200 whitespace-nowrap"
+>
+  Download Brochure
 </a>
 
-        <button className="bg-white text-black border-[#5E0BD1] border-[1px] w-full sm:w-[254px] h-[43px] rounded-sm" onClick={scrollToForm} >
-          Download Brochure
-        </button>
-      </div>
+          </div>
+
 
       <div className="mt-10">
         <div className="flex flex-col gap-3">
@@ -515,29 +523,31 @@ const Fullstack = () => {
                                    <option>Online</option>                                 
                               </select>
                          </div>
+                         <input type="hidden" name="interest" value={interest} />
+
                          <button className='bg-[#5E0BD1] text-white py-2.5  font-[380] rounded-md mb-20'>Submit</button>
                      </form>
              </section>
 
-  {/* Learn Anywhere */}
-  <div className='bg-gradient-to-r from-[#60070B] to-[#9C0E76] py-8 md:py-12 px-4 md:px-12 lg:px-20 w-full rounded-lg mt-8'>
-    <h1 className='font-poppins text-[20px] sm:text-[24px] md:text-[35px] font-bold text-white text-center mb-4 md:mb-5 leading-tight'>
-      Learn Anywhere
-    </h1>
-    <p className='font-inter font-normal text-[14px] sm:text-[16px] md:text-[18px] text-white mb-5 md:mb-6 text-center'>
-      Choose how you want to learn
-    </p>
+   {/* Learn Anywhere */}
+ <div className='bg-gradient-to-r from-[#60070B] to-[#9C0E76] py-8 md:py-12 px-4 md:px-12 lg:px-20 w-full rounded-lg mt-8'>
+  <h1 className='font-poppins text-[20px] sm:text-[24px] md:text-[35px] font-bold text-white text-center mb-4 md:mb-5 leading-tight'>
+    Learn Anywhere
+  </h1>
+  <p className='font-inter font-light text-[14px] sm:text-[16px] md:text-[18px] text-white mb-5 md:mb-6 text-center'>
+    Choose how you want to learn
+  </p>
 
-    <span className='text-white flex flex-col md:flex-row md:gap-4 gap-1 items-start md:items-center mb-3 md:mb-4 font-inter text-[14px] sm:text-[16px] md:text-[18px] font-normal'>
-      <img src={Tick} alt="tick" className='w-[20px] sm:w-[23px] h-[16px] sm:h-[19px]'/>
-      <p><b>In-Person:</b> Learn at any of our Lagos centers.</p>
-    </span>
+  <span className='text-white flex flex-col md:flex-row md:gap-4 gap-1 items-center justify-center mb-3 md:mb-4 font-inter font-light text-[14px] sm:text-[16px] md:text-[18px] text-center'>
+    <img src={Tick} alt="tick" className='w-[20px] sm:w-[23px] h-[16px] sm:h-[19px]'/>
+    <p><span className="font-semibold">In-Person:</span> Learn at any of our Lagos centers.</p>
+  </span>
 
-    <span className='text-white flex flex-col md:flex-row md:gap-4 gap-1 items-start md:items-center font-inter text-[14px] sm:text-[16px] md:text-[18px] font-normal'>
-      <img src={Tick} alt="tick" className='w-[20px] sm:w-[23px] h-[16px] sm:h-[19px]'/>
-      <p><b>Online:</b> Join live classes from anywhere.</p>
-    </span>
-  </div>
+  <span className='text-white flex flex-col md:flex-row md:gap-4 gap-1 items-center justify-center font-inter font-light text-[14px] sm:text-[16px] md:text-[18px] text-center'>
+    <img src={Tick} alt="tick" className='w-[20px] sm:w-[23px] h-[16px] sm:h-[19px]'/>
+    <p><span className="font-semibold">Online:</span> Join live classes from anywhere.</p>
+  </span>
+</div>
 
   {/* Ready to Redesign */}
   <div className="w-full bg-[#F6F7FD] rounded-xl px-4 sm:px-6 md:px-12 py-10 sm:py-12 flex flex-col items-center text-center gap-5 mt-10 mx-auto max-w-[1133px]">
